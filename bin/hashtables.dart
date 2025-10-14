@@ -37,4 +37,33 @@ void main() {
 
   final studentName = students.getStudent(2024007);
   print(studentName);
+
+  final word = 'cat';
+  print(word.hashCode);
+  final arraySize = 200;
+  final index = word.hashCode % arraySize ;
+  print(index);
+
+
+
+
+  Map<int, String> idToNameMap = {
+    2024078: 'AZ1', 
+    2024077: 'AZ2',
+    2021018: 'AD', //key(integer):value(string)
+
+  };
+
+  final name = idToNameMap[2021018];
+  print(name);
+
+  Map <String, int> nameToIdMap = {
+    'AZ1':2024078,
+    'AZ2':2024077,
+    'AD':2021018,
+  };
+
+  final id = nameToIdMap['AZ1'];
+  print(id);  // O(1) - constant time complexity
+
 }

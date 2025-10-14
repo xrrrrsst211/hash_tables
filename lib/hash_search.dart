@@ -8,8 +8,13 @@ class Student {
 
   Student(this.id, this.name);
 
+ 
+
   @override
   String toString() => '[$id] $name';
+
+  //@override
+  //int get hashCode => id % 100;
 }
 
 class HashTable {
@@ -21,8 +26,8 @@ class HashTable {
   }
 
   int _hash(int studentId) {
-    return studentId % 100;
-  }
+    return studentId % 100; //remainder is an index in students list(two last digits)
+  } 
 
   Student? getStudent(int studentId) {
     final index = _hash(studentId);
@@ -34,4 +39,6 @@ class HashTable {
     }
     return null;
   }
+
+  
 }
